@@ -5,34 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content Scoring Tool - AI-Powered Analysis</title>
     <style>
-        body, h1, h3, p { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', sans-serif; line-height: 1.6; background: #fff; color: #333; }
-        header { background: #fff; border-bottom: 1px solid #eee; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .container { width: 90%; max-width: 1200px; margin: auto; }
-        .logo { float: left; }
-        nav { float: right; text-transform: uppercase; letter-spacing: 0.05em; }
-        nav ul { list-style: none; padding: 0; }
-        nav ul li { display: inline-block; margin-left: 20px; }
-        nav a { color: #333; text-decoration: none; font-weight: 500; }
-        .hero { background: url('hero-placeholder.jpg') no-repeat center center/cover; 
-                min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
-        .hero-text { max-width: 600px; }
+        /* Reset and base styles */
+        body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; background-color: #f4f4f4; color: #333; }
+        
+        /* Header */
+        header { background: #ffffff; border-bottom: 1px solid #e1e1e1; padding: 1rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .logo img { height: 50px; }
+        nav { float: right; }
+        nav ul { list-style: none; display: flex; gap: 1rem; padding: 0; }
+        nav ul li { margin: 0; }
+        nav a { color: #007BFF; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #0056b3; }
+
+        /* Hero section */
+        .hero { background: url('hero-placeholder.jpg') no-repeat center center/cover; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+        .hero-text { max-width: 700px; padding: 0 1rem; }
+        .hero-text h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero-text p { font-size: 1.25rem; margin-bottom: 2rem; }
+        button { background: #007BFF; color: #fff; border: none; padding: 0.75rem 2rem; border-radius: 50px; cursor: pointer; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; transition: background-color 0.3s; }
+        button:hover { background: #0056b3; }
+
+        /* Sections */
         .section { padding: 4rem 0; text-align: center; }
-        .section-title { margin-bottom: 1rem; }
-        .section-content { margin-bottom: 3rem; }
-        .section-content p { max-width: 600px; margin-left: auto; margin-right: auto; }
-        button { background: #0056b3; color: #fff; border: none; padding: 0.75rem 2rem; 
-                  border-radius: 2rem; cursor: pointer; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.09em; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-        button:hover { background: #003d82; }
+        .section-title { margin-bottom: 2rem; }
+        .section-title h2 { font-size: 2.5rem; color: #333; }
+        .section-title p { font-size: 1.1rem; color: #555; }
+        .section-content { max-width: 800px; margin: 0 auto; text-align: left; }
+        .section-content ul { list-style-type: disc; padding-left: 1.5rem; }
+        .section-content li { margin-bottom: 1rem; }
+
+        /* Footer */
         footer { background: #333; color: #fff; padding: 2rem 0; text-align: center; }
         footer p { margin: 0; font-size: 0.9rem; }
-        img.placeholder { width: 100%; height: auto; background-size: cover; background-position: center; border-radius: 10px; }
+
+        /* Responsive styles */
         @media (max-width: 768px) {
-            nav ul li { display: block; margin: 10px 0; }
-            .hero { padding: 2rem; min-height: 70vh; }
+            nav { float: none; text-align: center; }
+            nav ul { flex-direction: column; gap: 0.5rem; }
+            .hero { padding: 2rem; min-height: 60vh; }
             .hero-text h1 { font-size: 2rem; }
             .hero-text p { font-size: 1rem; }
-            .section { padding: 2rem 0; }
+            .section { padding: 2rem 1rem; }
+            .section-title h2 { font-size: 2rem; }
+            .section-content ul { padding-left: 1rem; }
         }
     </style>
 </head>
@@ -41,7 +58,7 @@
 <header>
     <div class="container">
         <div class="logo">
-            <img src="logo.png" alt="Logo" height="50">
+            <img src="logo.png" alt="Logo">
         </div>
         <nav>
             <ul>
@@ -54,19 +71,35 @@
 </header>
 
 <div class="hero">
-    <div class="container hero-text">
+    <div class="hero-text">
         <h1>Unlock the Potential of Your Content with AI-Powered Scoring</h1>
         <p>Transform your content strategy with data-driven insights. Our AI tool provides you with the scores and analysis you need to succeed.</p>
         <button>Get Started</button>
     </div>
 </div>
 
-
 <div id="features" class="features container">
-    <!-- Features content goes here -->
+    <div class="feature">
+        <img class="placeholder" src="https://via.placeholder.com/300" alt="Visual Analysis">
+        <h3>Accurate Visual Analysis</h3>
+        <p>Uncover the visual elements that capture your audience's attention with our AI-powered heatmaps.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="feature">
+        <img class="placeholder" src="https://via.placeholder.com/300" alt="User Experience">
+        <h3>Enhanced User Experience</h3>
+        <p>Our tool evaluates the usability and navigation of your content, providing actionable feedback to improve user engagement.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="feature">
+        <img class="placeholder" src="https://via.placeholder.com/300" alt="Emotion Analysis">
+        <h3>Emotion Analysis</h3>
+        <p>Measure the emotional impact of your content with our advanced sentiment analysis features.</p>
+        <button>Learn More</button>
+    </div>
+    <!-- Add more features as needed -->
 </div>
-
-<div id="about" class="about section container">
+<div id="about" class="section container">
     <div class="section-title">
         <h2>About Our Tool</h2>
         <p>Discover the power of AI in elevating your content strategy.</p>
@@ -87,8 +120,14 @@
     </div>
 </div>
 
-<div id="contact" class="contact section container">
-    <!-- Contact content goes here -->
+<div id="contact" class="section container">
+    <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you. Reach out for any inquiries or support.</p>
+    </div>
+    <div class="section-content">
+        <!-- Contact content goes here -->
+    </div>
 </div>
 
 <footer>

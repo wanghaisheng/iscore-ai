@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI内容评分工具 - 精准分析与优化</title>
+    <style>
+        /* Reset and base styles */
+        body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; background-color: #f4f4f4; color: #333; }
+        
+        /* Header */
+        header { background: #ffffff; border-bottom: 1px solid #e1e1e1; padding: 1rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .logo img { height: 50px; }
+        nav { float: right; }
+        nav ul { list-style: none; display: flex; gap: 1rem; padding: 0; }
+        nav ul li { margin: 0; }
+        nav a { color: #007BFF; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #0056b3; }
+
+        /* Hero section */
+        .hero { background: url('hero-placeholder.jpg') no-repeat center center/cover; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+        .hero-text { max-width: 700px; padding: 0 1rem; }
+        .hero-text h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero-text p { font-size: 1.25rem; margin-bottom: 2rem; }
+        button { background: #007BFF; color: #fff; border: none; padding: 0.75rem 2rem; border-radius: 50px; cursor: pointer; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; transition: background-color 0.3s; }
+        button:hover { background: #0056b3; }
+
+        /* Features Section */
+        .features { padding: 4rem 0; text-align: center; background: #ffffff; }
+        .features .section-title { margin-bottom: 2rem; }
+        .features .section-title h2 { font-size: 2.5rem; color: #333; }
+        .features .section-title p { font-size: 1.1rem; color: #555; }
+        .features .feature { margin-bottom: 2rem; }
+        .features .feature h3 { font-size: 1.75rem; color: #007BFF; margin-bottom: 0.5rem; }
+        .features .feature p { font-size: 1rem; color: #333; }
+        .features ul { list-style: none; padding: 0; }
+        .features ul li { margin-bottom: 1rem; font-size: 1rem; color: #555; }
+
+        /* Call to Action */
+        .cta { background: #007BFF; color: #fff; padding: 2rem; text-align: center; }
+        .cta h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .cta p { font-size: 1.1rem; margin-bottom: 2rem; }
+        .cta button { background: #fff; color: #007BFF; border: none; padding: 0.75rem 2rem; border-radius: 50px; cursor: pointer; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        .cta button:hover { background: #f4f4f4; }
+
+        /* Testimonials Section */
+        .testimonials { padding: 4rem 0; background: #f9f9f9; }
+        .testimonials .section-title { text-align: center; margin-bottom: 2rem; }
+        .testimonials .section-title h2 { font-size: 2.5rem; color: #333; }
+        .testimonials .testimonial { max-width: 800px; margin: 0 auto; text-align: center; }
+        .testimonials .testimonial p { font-size: 1.1rem; color: #555; margin-bottom: 1rem; }
+        .testimonials .testimonial h3 { font-size: 1.25rem; color: #007BFF; margin-bottom: 0.5rem; }
+
+        /* Footer */
+        footer { background: #333; color: #fff; padding: 2rem 0; text-align: center; }
+        footer p { margin: 0; font-size: 0.9rem; }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            nav { float: none; text-align: center; }
+            nav ul { flex-direction: column; gap: 0.5rem; }
+            .hero { padding: 2rem; min-height: 60vh; }
+            .hero-text h1 { font-size: 2rem; }
+            .hero-text p { font-size: 1rem; }
+            .features .feature h3 { font-size: 1.5rem; }
+            .features .feature p { font-size: 0.9rem; }
+            .cta h2 { font-size: 1.5rem; }
+            .cta p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#features">功能介绍</a></li>
+                <li><a href="#testimonials">用户评价</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-text">
+        <h1>Unlock the Potential of Your Content with AI-Powered Scoring</h1>
+        <p>Transform your content strategy with data-driven insights. Our AI tool provides you with the scores and analysis you need to succeed.</p>
+        <button>Get Started</button>
+    </div>
+</div>
+
+<div id="features" class="features container">
+    <div class="section-title">
+        <h2>功能介绍</h2>
+        <p>探索我们的AI内容评分工具的主要功能和优势。</p>
+    </div>
+    <div class="feature">
+        <h3>精准视觉分析</h3>
+        <p>洞察用户焦点，AI揭示内容吸引力核心。</p>
+    </div>
+    <div class="feature">
+        <h3>多维度评分指标</h3>
+        <p>定制评分，全面量化内容价值。</p>
+    </div>
+    <div class="feature">
+        <h3>直观热图反馈</h3>
+        <p>一眼捕捉用户视觉轨迹，优化内容布局。</p>
+    </div>
+    <div class="feature">
+        <h3>用户体验优化</h3>
+        <p>提升界面设计，增强用户互动。</p>
+    </div>
+    <div class="feature">
+        <h3>情感分析</h3>
+        <p>评估情感共鸣，增强内容感染力。</p>
+    </div>
+    <div class="feature">
+        <h3>一键式上传与分析</h3>
+        <p>简化操作流程，迅速获得深度分析。</p>
+    </div>
+    <div class="feature">
+        <h3>实时反馈与迭代</h3>
+        <p>动态优化，持续提升评分准确性。</p>
+    </div>
+    <div class="feature">
+        <h3>数据驱动的决策支持</h3>
+        <p>基于深度分析，助力精准决策。</p>
+    </div>
+    <div class="feature">
+        <h3>安全与隐私保护</h3>
+        <p>保障用户数据安全，维护隐私权益。</p>
+    </div>
+    <div class="feature">
+        <h3>易于集成</h3>
+        <p>轻松集成至现有系统，无缝扩展功能。</p>
+    </div>
+</div>
+
+<div class="cta">
+    <h2>Start Scoring Your Content Today</h2>
+    <p>立即注册并开始使用我们的AI内容评分工具，获取宝贵的见解和优化建议。</p>
+    <button>注册试用</button>
+</div>
+
+<div id="testimonials" class="testimonials container">
+    <div class="section-title">
+        <h2>用户评价</h2>
+        <p>看看我们的用户怎么说</p>
+    </div>
+    <div class="testimonial">
+        <p>“这款工具大大提高了我们的内容质量分析效率，数据非常准确！”</p>
+        <h3>张伟，市场经理</h3>
+    </div>
+    <div class="testimonial">
+        <p>“一键上传和分析功能非常方便，帮助我们快速优化内容。”</p>
+        <h3>李娜，内容创作者</h3>
+    </div>
+</div>
+
+<div id="contact" class="section container">
+    <div class="section-title">
+        <h2>联系我们</h2>
+        <p>我们非常乐意为您提供帮助和支持。</p>
+    </div>
+    <div class="section-content">
+        <p>如有任何问题或建议，请通过以下方式联系我们：</p>
+        <p>邮箱: <a href="mailto:support@example.com">support@example.com</a></p>
+        <p>电话: +86 123 456 7890</p>
+        <p>地址: 北京市朝阳区某街道100号</p>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 AI内容评分工具。保留所有权利。</p>
+    </div>
+</footer>
+
+</body>
+</html>

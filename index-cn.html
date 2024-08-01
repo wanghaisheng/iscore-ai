@@ -32,9 +32,31 @@
         .features .section-title { text-align: center; margin-bottom: 3rem; }
         .features .section-title h2 { font-size: 2.5rem; color: #333; }
         .features .section-title p { font-size: 1.2rem; color: #555; }
-        .features .feature { max-width: 800px; margin: 0 auto 2rem auto; text-align: center; }
-        .features .feature h3 { font-size: 1.75rem; color: #007BFF; margin-bottom: 0.5rem; }
-        .features .feature p { font-size: 1rem; color: #333; line-height: 1.5; }
+
+        .features-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 2rem; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .features .feature { 
+            background: #f4f4f4; 
+            border-radius: 10px; 
+            padding: 2rem; 
+            text-align: center; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+        .features .feature h3 { 
+            font-size: 1.75rem; 
+            color: #007BFF; 
+            margin-bottom: 0.5rem; 
+        }
+        .features .feature p { 
+            font-size: 1rem; 
+            color: #333; 
+            line-height: 1.5; 
+        }
 
         /* CTA Section */
         .cta { background: #007BFF; color: #fff; padding: 3rem 1rem; text-align: center; }
@@ -103,50 +125,52 @@
     </div>
 </div>
 
-<div id="features" class="features container">
+<div id="features" class="features">
     <div class="section-title">
         <h2>功能介绍</h2>
         <p>探索我们的AI内容评分工具的主要功能和优势。</p>
     </div>
-    <div class="feature">
-        <h3>精准视觉分析</h3>
-        <p>洞察用户焦点，AI揭示内容吸引力核心。通过详细的视觉分析，了解用户的注意力集中区域，优化内容设计，提高用户互动率。</p>
-    </div>
-    <div class="feature">
-        <h3>多维度评分指标</h3>
-        <p>定制化评分，涵盖美学、用户体验、情感影响等多个维度对内容进行评分，确保全面评估其效果。</p>
-    </div>
-    <div class="feature">
-        <h3>直观热图反馈</h3>
-        <p>一眼捕捉用户视觉轨迹，优化内容布局。热图功能帮助您了解用户的关注区域及浏览顺序，优化内容布局和视觉效果。</p>
-    </div>
-    <div class="feature">
-        <h3>用户体验优化</h3>
-        <p>提升界面设计，增强用户互动。根据ALOHA模型的分析结果优化网页和设计稿的用户体验，提高整体的用户满意度和互动率。</p>
-    </div>
-    <div class="feature">
-        <h3>情感分析</h3>
-        <p>评估情感共鸣，增强内容感染力。通过情感分析，了解内容引发的情感反应，增强内容的吸引力和感染力。</p>
-    </div>
-    <div class="feature">
-        <h3>一键式上传与分析</h3>
-        <p>简化操作流程，迅速获得深度分析。支持一键式内容上传，快速获取基于AI的深度分析和评分，提升工作效率。</p>
-    </div>
-    <div class="feature">
-        <h3>实时反馈与迭代</h3>
-        <p>动态优化，持续提升评分准确性。根据用户反馈和模型学习，持续优化评分系统，确保分析结果的准确性和有效性。</p>
-    </div>
-    <div class="feature">
-        <h3>数据驱动的决策支持</h3>
-        <p>基于深度分析，助力精准决策。为内容创作者和市场研究人员提供数据支持，帮助做出更明智的决策。</p>
-    </div>
-    <div class="feature">
-        <h3>安全与隐私保护</h3>
-        <p>保障用户数据安全，维护隐私权益。确保所有用户数据都经过严格保护，遵守隐私法律法规。</p>
-    </div>
-    <div class="feature">
-        <h3>易于集成</h3>
-        <p>轻松集成至现有系统，无缝扩展功能。提供API接口，方便与现有工作流程和系统集成，提高工作效率。</p>
+    <div class="features-grid">
+        <div class="feature">
+            <h3>精准视觉分析</h3>
+            <p>洞察用户焦点，AI揭示内容吸引力核心。通过详细的视觉分析，了解用户的注意力集中区域，优化内容设计，提高用户互动率。</p>
+        </div>
+        <div class="feature">
+            <h3>多维度评分指标</h3>
+            <p>定制化评分，涵盖美学、用户体验、情感影响等。根据您的需求选择和调整评分标准，全面量化内容价值。</p>
+        </div>
+        <div class="feature">
+            <h3>直观热图反馈</h3>
+            <p>通过热图直观展示用户关注区域和观看顺序，优化内容布局。清晰展示用户的视觉轨迹，帮助您快速做出调整。</p>
+        </div>
+        <div class="feature">
+            <h3>用户体验优化</h3>
+            <p>根据ALOHA模型的分析结果，优化网页和设计稿的用户体验。提升界面设计，增强用户互动。</p>
+        </div>
+        <div class="feature">
+            <h3>情感分析</h3>
+            <p>评估情感共鸣，增强内容感染力。通过情感分析，了解内容引发的情感反应，增强内容的吸引力和感染力。</p>
+        </div>
+        <div class="feature">
+            <h3>一键式上传与分析</h3>
+            <p>简化操作流程，迅速获得深度分析。支持一键式内容上传，快速获取基于AI的深度分析和评分，提升工作效率。</p>
+        </div>
+        <div class="feature">
+            <h3>实时反馈与迭代</h3>
+            <p>动态优化，持续提升评分准确性。根据用户反馈和模型学习，持续优化评分系统，确保分析结果的准确性和有效性。</p>
+        </div>
+        <div class="feature">
+            <h3>数据驱动的决策支持</h3>
+            <p>基于深度分析，助力精准决策。为内容创作者和市场研究人员提供数据支持，帮助做出更明智的决策。</p>
+        </div>
+        <div class="feature">
+            <h3>安全与隐私保护</h3>
+            <p>保障用户数据安全，维护隐私权益。确保所有用户数据都经过严格保护，遵守隐私法律法规。</p>
+        </div>
+        <div class="feature">
+            <h3>易于集成</h3>
+            <p>轻松集成至现有系统，无缝扩展功能。提供API接口，方便与现有工作流程和系统集成，提高工作效率。</p>
+        </div>
     </div>
 </div>
 
@@ -156,7 +180,7 @@
     <button>注册试用</button>
 </div>
 
-<div id="testimonials" class="testimonials container">
+<div id="testimonials" class="testimonials">
     <div class="section-title">
         <h2>用户评价</h2>
         <p>看看我们的用户怎么说</p>
@@ -171,7 +195,7 @@
     </div>
 </div>
 
-<div id="contact" class="contact container">
+<div id="contact" class="contact">
     <div class="section-title">
         <h2>联系我们</h2>
         <p>我们非常乐意为您提供帮助和支持。</p>

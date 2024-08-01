@@ -5,70 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI内容评分工具 - 精准分析与优化</title>
     <style>
-        /* Reset and base styles */
+        /* Base styles */
         body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; line-height: 1.6; background-color: #f4f4f4; color: #333; }
-        
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; background-color: #f9f9f9; color: #333; }
+
         /* Header */
-        header { background: #ffffff; border-bottom: 1px solid #e1e1e1; padding: 1rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        header { background: #ffffff; border-bottom: 1px solid #e1e1e1; padding: 1rem 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
         .logo img { height: 50px; }
-        nav { float: right; }
-        nav ul { list-style: none; display: flex; gap: 1rem; padding: 0; }
+        nav ul { list-style: none; display: flex; gap: 1.5rem; padding: 0; margin: 0; }
         nav ul li { margin: 0; }
-        nav a { color: #007BFF; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a { color: #007BFF; text-decoration: none; font-weight: 600; transition: color 0.3s; }
         nav a:hover { color: #0056b3; }
 
         /* Hero section */
-        .hero { background: url('hero-placeholder.jpg') no-repeat center center/cover; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
-        .hero-text { max-width: 700px; padding: 0 1rem; }
-        .hero-text h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero { background: url('hero-placeholder.jpg') no-repeat center center/cover; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 0 1rem; }
+        .hero-text { max-width: 700px; }
+        .hero-text h1 { font-size: 3rem; margin-bottom: 1rem; line-height: 1.2; }
         .hero-text p { font-size: 1.25rem; margin-bottom: 2rem; }
-        button { background: #007BFF; color: #fff; border: none; padding: 0.75rem 2rem; border-radius: 50px; cursor: pointer; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; transition: background-color 0.3s; }
-        button:hover { background: #0056b3; }
+        button { background: #007BFF; color: #fff; border: none; padding: 0.75rem 2rem; border-radius: 50px; cursor: pointer; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; transition: background-color 0.3s, transform 0.2s; }
+        button:hover { background: #0056b3; transform: scale(1.05); }
+        button:focus { outline: none; }
 
         /* Features Section */
-        .features { padding: 4rem 0; text-align: center; background: #ffffff; }
-        .features .section-title { margin-bottom: 2rem; }
+        .features { padding: 4rem 1rem; background: #ffffff; }
+        .features .section-title { text-align: center; margin-bottom: 3rem; }
         .features .section-title h2 { font-size: 2.5rem; color: #333; }
-        .features .section-title p { font-size: 1.1rem; color: #555; }
-        .features .feature { margin-bottom: 2rem; padding: 0 1rem; }
+        .features .section-title p { font-size: 1.2rem; color: #555; }
+        .features .feature { max-width: 800px; margin: 0 auto 2rem auto; text-align: center; }
         .features .feature h3 { font-size: 1.75rem; color: #007BFF; margin-bottom: 0.5rem; }
-        .features .feature p { font-size: 1rem; color: #333; }
-        .features ul { list-style: none; padding: 0; }
-        .features ul li { margin-bottom: 1rem; font-size: 1rem; color: #555; }
+        .features .feature p { font-size: 1rem; color: #333; line-height: 1.5; }
 
-        /* Call to Action */
-        .cta { background: #007BFF; color: #fff; padding: 2rem; text-align: center; }
+        /* CTA Section */
+        .cta { background: #007BFF; color: #fff; padding: 3rem 1rem; text-align: center; }
         .cta h2 { font-size: 2rem; margin-bottom: 1rem; }
         .cta p { font-size: 1.1rem; margin-bottom: 2rem; }
-        .cta button { background: #fff; color: #007BFF; border: none; padding: 0.75rem 2rem; border-radius: 50px; cursor: pointer; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; }
-        .cta button:hover { background: #f4f4f4; }
+        .cta button { background: #fff; color: #007BFF; border: none; padding: 0.75rem 2rem; border-radius: 50px; cursor: pointer; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; transition: background-color 0.3s, transform 0.2s; }
+        .cta button:hover { background: #f4f4f4; transform: scale(1.05); }
+        .cta button:focus { outline: none; }
 
         /* Testimonials Section */
-        .testimonials { padding: 4rem 0; background: #f9f9f9; }
-        .testimonials .section-title { text-align: center; margin-bottom: 2rem; }
+        .testimonials { padding: 4rem 1rem; background: #f4f4f4; }
+        .testimonials .section-title { text-align: center; margin-bottom: 3rem; }
         .testimonials .section-title h2 { font-size: 2.5rem; color: #333; }
-        .testimonials .section-title p { font-size: 1.1rem; color: #555; }
+        .testimonials .section-title p { font-size: 1.2rem; color: #555; }
         .testimonials .testimonial { max-width: 800px; margin: 0 auto; text-align: center; }
         .testimonials .testimonial p { font-size: 1.1rem; color: #555; margin-bottom: 1rem; }
         .testimonials .testimonial h3 { font-size: 1.25rem; color: #007BFF; margin-bottom: 0.5rem; }
 
+        /* Contact Section */
+        .contact { padding: 4rem 1rem; background: #ffffff; }
+        .contact .section-title { text-align: center; margin-bottom: 3rem; }
+        .contact .section-title h2 { font-size: 2.5rem; color: #333; }
+        .contact .section-title p { font-size: 1.2rem; color: #555; }
+        .contact .section-content { text-align: center; }
+        .contact .section-content p { font-size: 1rem; color: #333; line-height: 1.6; }
+
         /* Footer */
-        footer { background: #333; color: #fff; padding: 2rem 0; text-align: center; }
+        footer { background: #333; color: #fff; padding: 2rem 1rem; text-align: center; }
         footer p { margin: 0; font-size: 0.9rem; }
 
         /* Responsive styles */
         @media (max-width: 768px) {
-            nav { float: none; text-align: center; }
-            nav ul { flex-direction: column; gap: 0.5rem; }
-            .hero { padding: 2rem; min-height: 60vh; }
             .hero-text h1 { font-size: 2rem; }
             .hero-text p { font-size: 1rem; }
             .features .feature h3 { font-size: 1.5rem; }
             .features .feature p { font-size: 0.9rem; }
             .cta h2 { font-size: 1.5rem; }
             .cta p { font-size: 1rem; }
+            .testimonials .testimonial p { font-size: 1rem; }
+            .testimonials .testimonial h3 { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -108,7 +114,7 @@
     </div>
     <div class="feature">
         <h3>多维度评分指标</h3>
-        <p>定制评分，全面量化内容价值。根据美学、用户体验、情感影响等多个维度对内容进行评分，确保全面评估其效果。</p>
+        <p>定制化评分，涵盖美学、用户体验、情感影响等多个维度对内容进行评分，确保全面评估其效果。</p>
     </div>
     <div class="feature">
         <h3>直观热图反馈</h3>
@@ -120,15 +126,15 @@
     </div>
     <div class="feature">
         <h3>情感分析</h3>
-        <p>评估情感共鸣，增强内容感染力。分析内容引发的情感反应，帮助您创建更具吸引力和影响力的内容。</p>
+        <p>评估情感共鸣，增强内容感染力。通过情感分析，了解内容引发的情感反应，增强内容的吸引力和感染力。</p>
     </div>
     <div class="feature">
         <h3>一键式上传与分析</h3>
-        <p>简化操作流程，迅速获得深度分析。只需一键上传内容，即可快速获得基于AI的深度分析和评分，节省时间，提高效率。</p>
+        <p>简化操作流程，迅速获得深度分析。支持一键式内容上传，快速获取基于AI的深度分析和评分，提升工作效率。</p>
     </div>
     <div class="feature">
         <h3>实时反馈与迭代</h3>
-        <p>动态优化，持续提升评分准确性。根据实时反馈和模型学习，不断优化评分系统，确保分析结果的准确性和有效性。</p>
+        <p>动态优化，持续提升评分准确性。根据用户反馈和模型学习，持续优化评分系统，确保分析结果的准确性和有效性。</p>
     </div>
     <div class="feature">
         <h3>数据驱动的决策支持</h3>
@@ -165,7 +171,7 @@
     </div>
 </div>
 
-<div id="contact" class="section container">
+<div id="contact" class="contact container">
     <div class="section-title">
         <h2>联系我们</h2>
         <p>我们非常乐意为您提供帮助和支持。</p>
